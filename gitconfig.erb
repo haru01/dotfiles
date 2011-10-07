@@ -1,20 +1,43 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
-	co = checkout
+  co = checkout
+  st = status -s
+  pr = pull --rebase
+  c = commit
+  a = add
+  al = add -A .
+  au = add -u
+  ap = add -p
+  b = branch
+  ba = branch -a
+  bm = branch --merged
+  d = diff
+  ds = diff --staged
+  wd = diff --word-diff
+  l = log --decorate
+  lo = log --oneline --decorate
+  ls = log --stat --decorate
+  lp = log -p --decorate
+  ru = remote update --prune
+  tree = log --graph --oneline --abbrev-commit --decorate
+  gn = grep -n
+  su = submodule update
+  rh = reset HEAD^
+  sfu = submodule foreach "git fetch; git checkout origin/master"
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
-	autocrlf = input
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = mate -w
+  autocrlf = input
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [github]
-	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
-	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+  user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
+  token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
