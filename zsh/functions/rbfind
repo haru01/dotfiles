@@ -1,0 +1,1 @@
+mdfind "kMDItemFSName == '*.rb' && kMDItemTextContent == '$1'" | xargs cat | less
