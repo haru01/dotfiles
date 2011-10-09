@@ -1,0 +1,1 @@
+mdfind "kMDItemFSName == '*.rb' && kMDItemTextContent == '$1'" | xargs ack "$1" --pager='less -R'
