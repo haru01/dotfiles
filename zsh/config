@@ -13,6 +13,12 @@ fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
 
+# 補完侯補をEmacsのキーバインドで動き回る
+zstyle ':completion:*:default' menu select=1
+# 補完の時に大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -35,6 +41,15 @@ setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
+
+setopt NO_BEEP
+setopt AUTO_LIST
+setopt LIST_PACKED
+setopt AUTO_MENU
+setopt AUTO_PARAM_KEYS
+setopt HIST_IGNORE_DUPS
+setopt HIST_NO_STORE
+setopt MARK_DIRS
 
 zle -N newtab
 
