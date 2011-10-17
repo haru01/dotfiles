@@ -30,9 +30,12 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+
 # commands starting with % for pasting from web
 alias %=' '
 
 # append
 alias show_conf='less ~/.gitconfig ~/.zsh/*'
 alias cd_tmbundle='cd ~/Library/Application\ Support/TextMate/Bundles'
+alias be='bundle exec'
+alias reload='source ~/.zshrc'
