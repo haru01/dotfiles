@@ -1,6 +1,7 @@
 # cd
 alias ..='cd ..'
 
+alias mate="subl -w"
 # ls
 alias ls="ls -FG"
 alias l="ls -lAhG"
