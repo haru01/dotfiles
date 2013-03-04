@@ -5,7 +5,7 @@ else
 fi
 
 export EDITOR='subl -w'
-export PATH="$HOME/.rbenv/bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/git/man:$MANPATH"
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
